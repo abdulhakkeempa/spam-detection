@@ -2,7 +2,6 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 import pandas as pd
-from sklearn.feature_extraction.text import CountVectorizer
 import re
 
 
@@ -32,7 +31,8 @@ def preprocess_message(message, lower_case = True, stem = True, stop_words = Tru
     stemmer = PorterStemmer()
     words = [stemmer.stem(word) for word in words]
 
-  return words
+  joined_words = ' '.join(words)
+  return joined_words
 
 
 def prepare_dataset(df):
