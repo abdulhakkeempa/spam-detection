@@ -31,7 +31,7 @@ $$
 
 1. Clone the project repository:
     ```
-    git clone https://github.com/abdulhakkeempa/spam-detection
+    git clone https://github.com/abdulhakkeempa/spam-detection.git
     ```
 
 2. Navigate to the project directory:
