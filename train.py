@@ -12,11 +12,6 @@ model = Pipeline([
   ('nb', MultinomialNB())
 ])
 
-# tf_model = Pipeline([
-#   ('vectorizer', TfidfVectorizer(max_features=10000)),
-#   ('nb', MultinomialNB())
-# ])
-
 def train_model(X,y, model):
   """
     Train the model
@@ -33,6 +28,6 @@ if __name__ == "__main__":
   print(f"Testing Score {model.score(X_test, y_test)}")
   print(confusion_matrix(model.predict(X_test), y_test))
   print(classification_report(model.predict(X_test), y_test))
-  # with open('./model/model.pickle', 'wb') as file:
-  #   pickle.dump(model, file)
+  with open('./model/model.pickle', 'wb') as file:
+    pickle.dump(model, file)
 
