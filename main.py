@@ -16,9 +16,7 @@ async def predict(message: str):
 
     # Make a prediction
     prediction = model.predict(X)
-
     probabilites = model.predict_proba(X)
-    predictions = (probabilites[:,1] >= 0.85).astype(int)
 
     # Return the prediction
-    return {"prediction": str(CLASSES[predictions[0]])}
+    return {"prediction": str(CLASSES[prediction[0]]), "probabilites": f"{probabilites[0]}"}
