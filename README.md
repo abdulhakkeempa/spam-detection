@@ -1,4 +1,10 @@
 # Spam Detection
+This project utilizes a recent <a href="https://www.kaggle.com/datasets/indronil2489/spam-sms-dataset">spam dataset</a> from Kaggle to build a spam classifier. The text data is preprocessed through various techniques including `stop words` removal and `lemmatization`. A pipeline is created with `CountVectorizer` and `Multinomial Naive Bayes` classifier, which achieved an impressive accuracy of 98%. The trained model is then deployed as a `FastAPI` endpoint for real-time spam classification. 
+
+## Packages
+1. Sklearn
+2. Pandas
+3. FastAPI
 
 ## NLP Basic Steps
 1. Data Preprocessing  
